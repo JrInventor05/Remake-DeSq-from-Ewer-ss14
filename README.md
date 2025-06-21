@@ -1,6 +1,6 @@
 ENG:
 
-# Remake- eSq from Ewer for ss14
+# Remake DeSq from Ewer for ss14
 Remake Death Squad for ss14 from Ewer by JrInventor05.
 
 RU:
