@@ -1,2 +1,10 @@
-# Remake-DeSq-from-Ewer-ss14
-Remake Death Squad for ss14 from Ewer by JrInventor05
+ENG:
+
+# Remake- eSq from Ewer for ss14
+Remake Death Squad for ss14 from Ewer by JrInventor05.
+
+RU:
+# Ремейк ЭС от Эвера для сс14
+Ремейк Эскадрона Смерти для сс14 от Эвера JrInventor05'ом.
+Данный прототип - переделка оригинального кода, с внесением собственных добавлений и правок. он так же был сделан частично при помощи комьюнити Corvax.
+Отдельная благодарность в создании данного прототипа обьявляется следующим людям(ник в дискорде):
