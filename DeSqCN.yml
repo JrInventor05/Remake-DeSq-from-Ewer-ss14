@@ -1524,6 +1524,7 @@
     fireRate: 7
     soundGunshot:
       path: /Uploaded/Remake-DeSq-from-Ewer-ss14-master/Sound/sp-91.ogg
+    requiresSkill: true # Corvax-Next-Skills
   - type: ChamberMagazineAmmoProvider
     soundRack:
       path: /Audio/Weapons/Guns/Cock/ltrifle_cock.ogg
@@ -1853,6 +1854,7 @@
       path: /Uploaded/Remake-DeSq-from-Ewer-ss14-master/Sound/pew.ogg
     soundEmpty:
       path: /Uploaded/Remake-DeSq-from-Ewer-ss14-master/Sound/empty.ogg
+    requiresSkill: true # Corvax-Next-Skills
   - type: Storage
     storageOpenSound: /Uploaded/Remake-DeSq-from-Ewer-ss14-master/Sound/loading2.ogg
     storageCloseSound: /Uploaded/Remake-DeSq-from-Ewer-ss14-master/Sound/loading3.ogg
