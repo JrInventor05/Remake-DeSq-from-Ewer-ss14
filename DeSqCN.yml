@@ -103,7 +103,7 @@
   suffix: Ewer
   components:
   - type: Sprite
-    sprite: Objects/Misc/bureaucracy.rsi
+    sprite: Objects/Misc/folders.rsi
     layers:
     - state: folder-white
     - state: folder-base
