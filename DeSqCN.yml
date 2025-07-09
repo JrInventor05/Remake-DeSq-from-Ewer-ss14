@@ -343,127 +343,32 @@
       - MedicalEquipment
       - Butchering
 
-- type: dataset
+- type: localizedDataset
   id: DeSqName
   values:
-  - Альфа
-  - Бета
-  - Гамма
-  - Дельта
-  - Дзета
-  - Эта
-  - Тета
-  - Йота
-  - Каппа
-  - Лямбда
-  - Омикрон
-  - Омега
-  - Сигма
-  - Пси
-  - Кси
+    prefix: names-syndicate-elite-dataset-
+    count: 23
+  # - Альфа
+  # - Бета
+  # - Гамма
+  # - Дельта
+  # - Дзета
+  # - Эта
+  # - Тета
+  # - Йота
+  # - Каппа
+  # - Лямбда
+  # - Омикрон
+  # - Омега
+  # - Сигма
+  # - Пси
+  # - Кси
 
-- type: dataset
+- type: localizedDataset
   id: DeSqNumber
   values:
-  - 1
-  - 2
-  - 3
-  - 4
-  - 5
-  - 6
-  - 7
-  - 8
-  - 9
-  - 10
-  - 11
-  - 12
-  - 13
-  - 14
-  - 15
-  - 16
-  - 17
-  - 18
-  - 19
-  - 20
-  - 21
-  - 22
-  - 23
-  - 24
-  - 25
-  - 26
-  - 27
-  - 28
-  - 29
-  - 30
-  - 31
-  - 32
-  - 33
-  - 34
-  - 35
-  - 36
-  - 37
-  - 38
-  - 39
-  - 40
-  - 41
-  - 42
-  - 43
-  - 44
-  - 45
-  - 46
-  - 47
-  - 48
-  - 49
-  - 50
-  - 51
-  - 52
-  - 53
-  - 54
-  - 55
-  - 56
-  - 57
-  - 58
-  - 59
-  - 60
-  - 61
-  - 62
-  - 63
-  - 64
-  - 65
-  - 66
-  - 67
-  - 68
-  - 69
-  - 70
-  - 71
-  - 72
-  - 73
-  - 74
-  - 75
-  - 76
-  - 77
-  - 78
-  - 79
-  - 80
-  - 81
-  - 82
-  - 83
-  - 84
-  - 85
-  - 86
-  - 87
-  - 88
-  - 89
-  - 90
-  - 91
-  - 92
-  - 93
-  - 94
-  - 95
-  - 96
-  - 97
-  - 98
-  - 99
+    prefix: ""
+    count: 99
 
 - type: entity
   parent: [ BaseCentcommContraband, ClothingOuterHardsuitBase ]
@@ -922,6 +827,9 @@
   - type: Tag
     tags:
     - HudSecurity
+  - type: ClothingGrantComponent
+    component:
+    - type: ThermalVision
 
 - type: entity
   parent: ClothingEyesBase
@@ -946,6 +854,7 @@
   - type: ShowHungerIcons
   - type: ShowThirstIcons
   - type: FlashImmunity
+  - type: SolutionScanner
 
 - type: entity
   parent: ClothingBeltStorageBase
@@ -982,7 +891,6 @@
         amount: 2
       - id: MedicatedSuture
         amount: 2
-
 
 - type: npcFaction
   id: DeathSquad
@@ -1828,6 +1736,33 @@
         amount: 9
 
 - type: entity
+  parent: PrefilledSyringeAmmoDeSq
+  suffix: Очень святая вода,Ewer
+  id: SyringeAmmoDeSqHolyMolyWater
+  components:
+  - type: Label
+    currentLabel: Очень святая вода
+  - type: SolutionContainerManager
+    solutions:
+      injector:
+        maxVol: 15
+        reagents:
+        - ReagentId: HolyMolyWater
+          Quantity: 15
+
+- type: entity
+  parent: BoxSyringeAmmoDeSq
+  suffix: Очень святая вода,Ewer
+  id: BoxSyringeAmmoDeSqHolyMolyWater
+  components:
+  - type: Label
+    currentLabel: Очень святая вода
+  - type: StorageFill
+    contents:
+      - id: SyringeAmmoDeSqHolyMolyWater
+        amount: 9
+
+- type: entity
   parent: WeaponImprovisedPneumaticCannon
   name: Мультизарядный шприцемет
   suffix: Ewer
@@ -1879,11 +1814,10 @@
 - type: entity
   name: Энергетический меч-бензопила
   suffix: Ewer
-  parent: BaseItem
+  parent: BaseMeleeWeaponEnergy
   id: DeSqChainsword
   description: Технологии и ультранасилие в одном флаконе!
   components:
-  - type: EnergySword
   - type: ItemToggle
     soundActivate:
       path: /Uploaded/Remake-DeSq-from-Ewer-ss14-master/Sound/start.ogg
@@ -1903,10 +1837,8 @@
     - type: Sharp
     - type: DisarmMalus
       malus: 0.9
-  - type: ItemToggleHot
-  - type: ItemToggleSize
-    activatedSize: Huge
-  - type: ItemTogglePointLight
+    - type: Execution
+      doAfterDuration: 2.0
   - type: ItemToggleMeleeWeapon
     activatedSoundOnHit:
       path: /Uploaded/Remake-DeSq-from-Ewer-ss14-master/Sound/hit.ogg
@@ -1931,6 +1863,7 @@
       - Prying
     useSound:
       path: /Audio/Items/crowbar.ogg
+  - type: Prying
   - type: Sprite
     sprite: /Uploaded/Remake-DeSq-from-Ewer-ss14-master/chainsword.rsi
     layers:
@@ -1942,11 +1875,12 @@
         map: [ "blade" ]
   - type: MeleeWeapon
     wideAnimationRotation: -135
-    attackRate: 1
+    attackRate: 1.5
     damage:
       types:
         Blunt: 10
         Slash: 5
+    autoAttack: true
   - type: PointLight
     enabled: false
     radius: 2
@@ -1958,27 +1892,37 @@
     sprite: /Uploaded/Remake-DeSq-from-Ewer-ss14-master/chainsword.rsi
   - type: UseDelay
     delay: 1.0
-  - type: Appearance
   - type: Reflect
     reflectProb: .25
     spread: 45
-  - type: IgnitionSource
-    temperature: 700
-  - type: ToggleableLightVisuals
-    spriteLayer: blade
-    inhandVisuals:
-      left:
-      - state: inhand-left-blade
-        shader: unshaded
-      right:
-      - state: inhand-right-blade
-        shader: unshaded
   - type: Clothing
     sprite: /Uploaded/Remake-DeSq-from-Ewer-ss14-master/acidgun.rsi
     quickEquip: false
     slots:
     - Back
     - suitStorage
+# Corvax-HiddenDesc-Start
+  - type: HiddenDescription
+    entries:
+    - label: "[color=#e31735]Настоящий меч-бензопила, с помощью которого можно отбивать пули и резать людей, как масло.[/color]"
+      whitelistMind:
+        mindRoles:
+        - TraitorRole
+        - NukeopsRole
+    - label: "[color=#DE3A3A]Это не игрушечная пила! Это настоящее энергетическое оружие![/color]"
+      jobRequired:
+        - HeadOfSecurity
+        - Detective
+        - SecurityCadet
+        - SecurityOfficer
+        - Warden
+        - Captain
+    - label: "[color=#DE3A3A]Это настоящий энергетический меч-бензопила, личное оружие командира Эскадрона Смерти![/color]"
+      jobRequired:
+        - DeSqCommander
+        - DeSqOfficer
+        - DeSqHealer
+# Corvax-HiddenDesc-End
 
 - type: entity
   name: ручка Эскадрона Смерти
