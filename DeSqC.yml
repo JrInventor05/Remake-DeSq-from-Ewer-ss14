@@ -427,6 +427,8 @@
     sprite: /Uploaded/Remake-DeSq-from-Ewer-ss14-master/dq_hardsuit_commander.rsi
     equipSound:
       path: /Uploaded/Remake-DeSq-from-Ewer-ss14-master/Sound/suit.ogg
+  - type: StaminaResistance
+    damageCoefficient: 1
   - type: PressureProtection
     highPressureMultiplier: 0.02
     lowPressureMultiplier: 1000
