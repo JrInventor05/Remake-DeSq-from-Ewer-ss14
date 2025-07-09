@@ -103,7 +103,7 @@
   suffix: Ewer
   components:
   - type: Sprite
-    sprite: Objects/Misc/bureaucracy.rsi
+    sprite: Objects/Misc/folders.rsi
     layers:
     - state: folder-white
     - state: folder-base
@@ -1303,7 +1303,7 @@
 - type: entity
   name: Офицер Эскадрона Смерти
   id: MobHumanDeSqOfficer
-  suffix: Ewer, DeathSquad
+  suffix: Ewer
   components:
   - type: Sprite
     sprite: /Uploaded/Remake-DeSq-from-Ewer-ss14-master/jobs.rsi
