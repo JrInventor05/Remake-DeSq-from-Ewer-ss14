@@ -1040,7 +1040,7 @@
     - Vulpkanin
     - Resomi
     - Vox
-    - IPC
+    - Ipc
     - Tajaran
   components:
     - type: GhostRole
@@ -1175,7 +1175,7 @@
     - Vulpkanin
     - Resomi
     - Vox
-    - IPC
+    - Ipc
     - Tajaran
   components:
     - type: GhostRole
@@ -1309,7 +1309,7 @@
     - Vulpkanin
     - Resomi
     - Vox
-    - IPC
+    - Ipc
     - Tajaran
   components:
     - type: GhostRole
