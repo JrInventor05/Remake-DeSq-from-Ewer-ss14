@@ -776,9 +776,6 @@
   - type: Tag
     tags:
     - HudSecurity
-  - type: ClothingGrantComponent
-    component:
-    - type: ThermalVision
 
 - type: entity
   parent: ClothingEyesBase
